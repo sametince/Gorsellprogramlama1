@@ -17,10 +17,7 @@ namespace Gorsellprogramlama1
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -28,6 +25,20 @@ namespace Gorsellprogramlama1
             frm2.Show();
             this.Hide();
 
+        }
+
+        private void BtnDers_Click(object sender, EventArgs e)
+        {
+            FrmDersler frm3 = new FrmDersler();
+            frm3.Show();
+            this.Hide();
+        }
+
+        private void BtnHakkımızda_Click(object sender, EventArgs e)
+        {
+            FrmHakkımızda frm4 = new FrmHakkımızda();
+            frm4.Show();
+            this.Hide();
         }
     }
 }

@@ -18,26 +18,8 @@ namespace Gorsellprogramlama1
             InitializeComponent();
         }
 
-        private void çıkışToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void geriToolStripMenuItem_Click(object sender, EventArgs e)
-        {
         
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
@@ -47,19 +29,48 @@ namespace Gorsellprogramlama1
         private void button2_Click_1(object sender, EventArgs e)
         {
             txtKurs.Text = "Görsel Programlama";
+            txtEgitmen.Text = "Ramazan Ozgur Doğan";
         }
 
         private void button3_Click_1(object sender, EventArgs e)
         {
             txtKurs.Text = "Yazılım, Test ve Doğrulama";
+            txtEgitmen.Text = "Salih Turk";
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             txtKurs.Text = "Elektronik Ticaret";
+            txtEgitmen.Text = "Ozkan Bingol";
         }
 
         private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSoyad_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+       
+        private void FrmKayıt_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtAd_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnKayıt_Click(object sender, EventArgs e)
         {
 
         }
