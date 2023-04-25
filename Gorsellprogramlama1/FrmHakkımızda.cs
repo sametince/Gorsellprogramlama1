@@ -16,5 +16,22 @@ namespace Gorsellprogramlama1
         {
             InitializeComponent();
         }
+
+        private void FrmHakkımızda_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void geriToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmAnaSayfa frm = new FrmAnaSayfa();
+            frm.Show();
+            this.Hide();
+        }
+
+        private void çıkışToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
+        }
     }
 }

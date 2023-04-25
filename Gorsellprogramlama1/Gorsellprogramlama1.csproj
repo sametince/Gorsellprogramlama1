@@ -242,6 +242,12 @@
     <EmbeddedResource Include="FrmAnaSayfa.resx">
       <DependentUpon>FrmAnaSayfa.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmDersler.resx">
+      <DependentUpon>FrmDersler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHakkımızda.resx">
+      <DependentUpon>FrmHakkımızda.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmKayıt.resx">
       <DependentUpon>FrmKayıt.cs</DependentUpon>
     </EmbeddedResource>

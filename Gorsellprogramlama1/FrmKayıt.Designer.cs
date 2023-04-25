@@ -48,8 +48,12 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.BtnKayıt = new System.Windows.Forms.Button();
+            this.geriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.çıkışToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -94,7 +98,7 @@
             this.comboBox1.Location = new System.Drawing.Point(97, 194);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(196, 24);
-            this.comboBox1.TabIndex = 25;
+            this.comboBox1.TabIndex = 20;
             // 
             // txtEgitmen
             // 
@@ -141,7 +145,7 @@
             this.txtAd.Multiline = true;
             this.txtAd.Name = "txtAd";
             this.txtAd.Size = new System.Drawing.Size(196, 34);
-            this.txtAd.TabIndex = 20;
+            this.txtAd.TabIndex = 16;
             this.txtAd.TextChanged += new System.EventHandler(this.txtAd_TextChanged);
             // 
             // txtSoyad
@@ -150,7 +154,7 @@
             this.txtSoyad.Multiline = true;
             this.txtSoyad.Name = "txtSoyad";
             this.txtSoyad.Size = new System.Drawing.Size(196, 34);
-            this.txtSoyad.TabIndex = 19;
+            this.txtSoyad.TabIndex = 17;
             this.txtSoyad.TextChanged += new System.EventHandler(this.txtSoyad_TextChanged);
             // 
             // maskedTextBox1
@@ -159,7 +163,7 @@
             this.maskedTextBox1.Mask = "(999) 000-0000";
             this.maskedTextBox1.Name = "maskedTextBox1";
             this.maskedTextBox1.Size = new System.Drawing.Size(196, 22);
-            this.maskedTextBox1.TabIndex = 17;
+            this.maskedTextBox1.TabIndex = 25;
             // 
             // txtMail
             // 
@@ -167,7 +171,7 @@
             this.txtMail.Multiline = true;
             this.txtMail.Name = "txtMail";
             this.txtMail.Size = new System.Drawing.Size(196, 34);
-            this.txtMail.TabIndex = 16;
+            this.txtMail.TabIndex = 19;
             // 
             // label4
             // 
@@ -258,10 +262,36 @@
             this.BtnKayıt.Location = new System.Drawing.Point(325, 447);
             this.BtnKayıt.Name = "BtnKayıt";
             this.BtnKayıt.Size = new System.Drawing.Size(117, 34);
-            this.BtnKayıt.TabIndex = 19;
+            this.BtnKayıt.TabIndex = 26;
             this.BtnKayıt.Text = "Kayıt";
             this.BtnKayıt.UseVisualStyleBackColor = true;
             this.BtnKayıt.Click += new System.EventHandler(this.BtnKayıt_Click);
+            // 
+            // geriToolStripMenuItem
+            // 
+            this.geriToolStripMenuItem.Name = "geriToolStripMenuItem";
+            this.geriToolStripMenuItem.Size = new System.Drawing.Size(49, 24);
+            this.geriToolStripMenuItem.Text = "geri";
+            this.geriToolStripMenuItem.Click += new System.EventHandler(this.geriToolStripMenuItem_Click);
+            // 
+            // çıkışToolStripMenuItem
+            // 
+            this.çıkışToolStripMenuItem.Name = "çıkışToolStripMenuItem";
+            this.çıkışToolStripMenuItem.Size = new System.Drawing.Size(51, 24);
+            this.çıkışToolStripMenuItem.Text = "çıkış";
+            this.çıkışToolStripMenuItem.Click += new System.EventHandler(this.çıkışToolStripMenuItem_Click);
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.geriToolStripMenuItem,
+            this.çıkışToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(885, 28);
+            this.menuStrip1.TabIndex = 20;
+            this.menuStrip1.Text = "menuStrip1";
             // 
             // FrmKayıt
             // 
@@ -271,13 +301,18 @@
             this.Controls.Add(this.BtnKayıt);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "FrmKayıt";
-            this.Text = "FrmKayıt";
+            this.Text = "Öğrenci Kayıt";
             this.Load += new System.EventHandler(this.FrmKayıt_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -303,5 +338,8 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button BtnKayıt;
+        private System.Windows.Forms.ToolStripMenuItem geriToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem çıkışToolStripMenuItem;
+        private System.Windows.Forms.MenuStrip menuStrip1;
     }
 }

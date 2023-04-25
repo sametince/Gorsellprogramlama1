@@ -8,6 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Net.Mime.MediaTypeNames;
+using Firebase.Auth;
+using Firebase.Auth.Providers;
+using Firebase.Auth.Repository;
+using System.Diagnostics.Eventing.Reader;
 
 namespace Gorsellprogramlama1
 {
@@ -72,7 +76,33 @@ namespace Gorsellprogramlama1
 
         private void BtnKayıt_Click(object sender, EventArgs e)
         {
+            string ad = txtAd.Text;
+            string soyad = txtSoyad.Text;
+            string mail = txtMail.Text;
+            string telefon = maskedTextBox1.Text;
+            string kurs = txtKurs.Text;
+            string cinsiyet= maskedTextBox1.Text;
 
+            if (ad == "" || soyad == "" || mail == "" || telefon == "" || kurs == "" || cinsiyet == "")
+            {
+                MessageBox.Show("Eksik Bilgi Girdiniz.");
+            }
+           
+                               
+            else
+                MessageBox.Show("Kaydedildi");
+        }
+
+        private void geriToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmAnaSayfa frm = new FrmAnaSayfa();
+            frm.Show();
+            this.Hide();
+        }
+
+        private void çıkışToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
         }
     }
 }

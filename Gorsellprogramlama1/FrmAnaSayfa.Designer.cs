@@ -32,6 +32,7 @@
             this.BtnHakkımızda = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BtnDers = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,11 +48,11 @@
             // 
             // BtnHakkımızda
             // 
-            this.BtnHakkımızda.Location = new System.Drawing.Point(57, 329);
+            this.BtnHakkımızda.Location = new System.Drawing.Point(57, 229);
             this.BtnHakkımızda.Name = "BtnHakkımızda";
             this.BtnHakkımızda.Size = new System.Drawing.Size(197, 60);
             this.BtnHakkımızda.TabIndex = 3;
-            this.BtnHakkımızda.Text = "Hakkımızda";
+            this.BtnHakkımızda.Text = "Kurum Hakkında";
             this.BtnHakkımızda.UseVisualStyleBackColor = true;
             this.BtnHakkımızda.Click += new System.EventHandler(this.BtnHakkımızda_Click);
             // 
@@ -67,25 +68,36 @@
             // 
             // BtnDers
             // 
-            this.BtnDers.Location = new System.Drawing.Point(57, 183);
+            this.BtnDers.Location = new System.Drawing.Point(57, 142);
             this.BtnDers.Name = "BtnDers";
             this.BtnDers.Size = new System.Drawing.Size(197, 60);
             this.BtnDers.TabIndex = 5;
-            this.BtnDers.Text = "Dersler";
+            this.BtnDers.Text = "Kurs Bilgileri";
             this.BtnDers.UseVisualStyleBackColor = true;
             this.BtnDers.Click += new System.EventHandler(this.BtnDers_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(57, 316);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(197, 60);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "ÇIKIŞ";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // FrmAnaSayfa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.BtnDers);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.BtnHakkımızda);
             this.Controls.Add(this.BtnKayıtEkleme);
             this.Name = "FrmAnaSayfa";
-            this.Text = "Form1";
+            this.Text = "Ana Sayfa";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -97,6 +109,7 @@
         private System.Windows.Forms.Button BtnHakkımızda;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button BtnDers;
+        private System.Windows.Forms.Button button1;
     }
 }
 
