@@ -237,6 +237,7 @@
     <Compile Include="FrmKayıt.Designer.cs">
       <DependentUpon>FrmKayıt.cs</DependentUpon>
     </Compile>
+    <Compile Include="KursK.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmAnaSayfa.resx">

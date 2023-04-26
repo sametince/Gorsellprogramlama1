@@ -7,11 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Firebase.Database;
+using Firebase.Storage;
+using Firebase.Database.Query;
+
+
+
 
 namespace Gorsellprogramlama1
 {
     public partial class FrmAnaSayfa : Form
     {
+       
         public FrmAnaSayfa()
         {
             InitializeComponent();

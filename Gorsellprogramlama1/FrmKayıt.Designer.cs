@@ -33,7 +33,6 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.txtEgitmen = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtKurs = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtAd = new System.Windows.Forms.TextBox();
             this.txtSoyad = new System.Windows.Forms.TextBox();
@@ -51,6 +50,7 @@
             this.geriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.çıkışToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.txtKurs = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -58,11 +58,11 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtKurs);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.txtEgitmen);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.txtKurs);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.txtAd);
             this.groupBox1.Controls.Add(this.txtSoyad);
@@ -119,16 +119,6 @@
             this.label6.TabIndex = 23;
             this.label6.Text = "Eğitmen:";
             // 
-            // txtKurs
-            // 
-            this.txtKurs.Enabled = false;
-            this.txtKurs.Location = new System.Drawing.Point(94, 242);
-            this.txtKurs.Multiline = true;
-            this.txtKurs.Name = "txtKurs";
-            this.txtKurs.Size = new System.Drawing.Size(196, 34);
-            this.txtKurs.TabIndex = 22;
-            this.txtKurs.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -172,6 +162,7 @@
             this.txtMail.Name = "txtMail";
             this.txtMail.Size = new System.Drawing.Size(196, 34);
             this.txtMail.TabIndex = 19;
+            this.txtMail.TextChanged += new System.EventHandler(this.txtMail_TextChanged);
             // 
             // label4
             // 
@@ -293,6 +284,16 @@
             this.menuStrip1.TabIndex = 20;
             this.menuStrip1.Text = "menuStrip1";
             // 
+            // txtKurs
+            // 
+            this.txtKurs.Enabled = false;
+            this.txtKurs.Location = new System.Drawing.Point(94, 245);
+            this.txtKurs.Multiline = true;
+            this.txtKurs.Name = "txtKurs";
+            this.txtKurs.Size = new System.Drawing.Size(196, 34);
+            this.txtKurs.TabIndex = 27;
+            this.txtKurs.TextChanged += new System.EventHandler(this.txtKurs_TextChanged);
+            // 
             // FrmKayıt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -327,7 +328,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtKurs;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button button4;
@@ -341,5 +341,6 @@
         private System.Windows.Forms.ToolStripMenuItem geriToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem çıkışToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.TextBox txtKurs;
     }
 }

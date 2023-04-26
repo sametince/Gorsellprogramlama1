@@ -12,23 +12,24 @@ using Firebase.Auth;
 using Firebase.Auth.Providers;
 using Firebase.Auth.Repository;
 using System.Diagnostics.Eventing.Reader;
+using Firebase.Database;
+using Firebase.Database.Query;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Gorsellprogramlama1
 {
     public partial class FrmKayıt : Form
     {
+        private FirebaseClient firebase_istemci;
+
         public FrmKayıt()
         {
             InitializeComponent();
-        }
 
-        
-        
+            firebase_istemci = new FirebaseClient("https://gorsel-programlama-2-default-rtdb.firebaseio.com/");
 
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        } 
+          
 
         private void button2_Click_1(object sender, EventArgs e)
         {
@@ -58,9 +59,19 @@ namespace Gorsellprogramlama1
 
         }
 
-       
+        private void txtKurs_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void txtMail_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
         private void FrmKayıt_Load(object sender, EventArgs e)
         {
+           
 
         }
 
@@ -74,23 +85,71 @@ namespace Gorsellprogramlama1
 
         }
 
-        private void BtnKayıt_Click(object sender, EventArgs e)
+        private async void BtnKayıt_Click(object sender, EventArgs e)
         {
-            string ad = txtAd.Text;
-            string soyad = txtSoyad.Text;
-            string mail = txtMail.Text;
-            string telefon = maskedTextBox1.Text;
-            string kurs = txtKurs.Text;
-            string cinsiyet= maskedTextBox1.Text;
-
-            if (ad == "" || soyad == "" || mail == "" || telefon == "" || kurs == "" || cinsiyet == "")
+            string Ad = txtAd.Text;
+            string SoyAd = txtSoyad.Text;
+            string Mail = txtMail.Text;
+            string Cinsiyet = comboBox1.Text;
+            string Kurs = txtKurs.Text;
+            string Egitmen = txtEgitmen.Text;
+            string Telefon = maskedTextBox1.Text;
+            if (Ad == "" || SoyAd == "" || Mail == "" || Telefon == "" || Kurs == "" || Cinsiyet == "" )
             {
                 MessageBox.Show("Eksik Bilgi Girdiniz.");
             }
-           
-                               
+
+
             else
+            {
                 MessageBox.Show("Kaydedildi");
+
+                if (txtKurs.Text == button2.Text)
+                {
+                    KursK ogr1 = new KursK();
+                    ogr1.Ad = txtAd.Text;
+                    ogr1.SoyAd = txtSoyad.Text;
+                    ogr1.Mail = txtMail.Text;
+                    ogr1.Cinsiyet = comboBox1.Text;
+                    ogr1.Kurs = txtKurs.Text;
+                    ogr1.Egitmen = txtEgitmen.Text;
+                    ogr1.Telefon = maskedTextBox1.Text;
+
+                    await firebase_istemci.Child("Kurs").Child("Gorsel Programlama").PutAsync(ogr1);
+                    return;
+                }
+                if (txtKurs.Text == button3.Text)
+                {
+                    KursK ogr1 = new KursK();
+                    ogr1.Ad = txtAd.Text;
+                    ogr1.SoyAd = txtSoyad.Text;
+                    ogr1.Mail = txtMail.Text;
+                    ogr1.Cinsiyet = comboBox1.Text;
+                    ogr1.Kurs = txtKurs.Text;
+                    ogr1.Egitmen = txtEgitmen.Text;
+                    ogr1.Telefon = maskedTextBox1.Text;
+
+                    await firebase_istemci.Child("Kurs").Child("Yazılım, Test ve Doğrulama").PutAsync(ogr1);
+
+                    return;
+                }
+                if(txtKurs.Text == button4.Text)
+                {
+                    KursK ogr1 = new KursK();
+                    ogr1.Ad = txtAd.Text;
+                    ogr1.SoyAd = txtSoyad.Text;
+                    ogr1.Mail = txtMail.Text;
+                    ogr1.Cinsiyet = comboBox1.Text;
+                    ogr1.Kurs = txtKurs.Text;
+                    ogr1.Egitmen = txtEgitmen.Text;
+                    ogr1.Telefon = maskedTextBox1.Text;
+
+                    await firebase_istemci.Child("Kurs").Child("Elektronik Ticaret").PutAsync(ogr1);
+                    return;
+                }
+
+               
+            }
         }
 
         private void geriToolStripMenuItem_Click(object sender, EventArgs e)
@@ -104,5 +163,7 @@ namespace Gorsellprogramlama1
         {
             System.Windows.Forms.Application.Exit();
         }
+
+     
     }
 }
