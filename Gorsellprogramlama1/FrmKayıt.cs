@@ -104,47 +104,30 @@ namespace Gorsellprogramlama1
             {
                 MessageBox.Show("Kaydedildi");
 
+                KursK ogr1 = new KursK();
+                ogr1.Ad = txtAd.Text;
+                ogr1.SoyAd = txtSoyad.Text;
+                ogr1.Mail = txtMail.Text;
+                ogr1.Cinsiyet = comboBox1.Text;
+                ogr1.Kurs = txtKurs.Text;
+                ogr1.Egitmen = txtEgitmen.Text;
+                ogr1.Telefon = maskedTextBox1.Text;
+
                 if (txtKurs.Text == button2.Text)
                 {
-                    KursK ogr1 = new KursK();
-                    ogr1.Ad = txtAd.Text;
-                    ogr1.SoyAd = txtSoyad.Text;
-                    ogr1.Mail = txtMail.Text;
-                    ogr1.Cinsiyet = comboBox1.Text;
-                    ogr1.Kurs = txtKurs.Text;
-                    ogr1.Egitmen = txtEgitmen.Text;
-                    ogr1.Telefon = maskedTextBox1.Text;
-
-                    await firebase_istemci.Child("Kurs").Child("Gorsel Programlama").PutAsync(ogr1);
+                   
+                    await firebase_istemci.Child("Kurs").Child("Gorsel Programlama").Child(ogr1.Mail).PutAsync(ogr1);
                     return;
                 }
                 if (txtKurs.Text == button3.Text)
                 {
-                    KursK ogr1 = new KursK();
-                    ogr1.Ad = txtAd.Text;
-                    ogr1.SoyAd = txtSoyad.Text;
-                    ogr1.Mail = txtMail.Text;
-                    ogr1.Cinsiyet = comboBox1.Text;
-                    ogr1.Kurs = txtKurs.Text;
-                    ogr1.Egitmen = txtEgitmen.Text;
-                    ogr1.Telefon = maskedTextBox1.Text;
-
-                    await firebase_istemci.Child("Kurs").Child("Yazılım, Test ve Doğrulama").PutAsync(ogr1);
+                    await firebase_istemci.Child("Kurs").Child("Yazılım, Test, Doğrulama").Child(ogr1.Mail).PutAsync(ogr1);
 
                     return;
                 }
                 if(txtKurs.Text == button4.Text)
                 {
-                    KursK ogr1 = new KursK();
-                    ogr1.Ad = txtAd.Text;
-                    ogr1.SoyAd = txtSoyad.Text;
-                    ogr1.Mail = txtMail.Text;
-                    ogr1.Cinsiyet = comboBox1.Text;
-                    ogr1.Kurs = txtKurs.Text;
-                    ogr1.Egitmen = txtEgitmen.Text;
-                    ogr1.Telefon = maskedTextBox1.Text;
-
-                    await firebase_istemci.Child("Kurs").Child("Elektronik Ticaret").PutAsync(ogr1);
+                    await firebase_istemci.Child("Kurs").Child("Elektronik Ticaret").Child(ogr1.Mail).PutAsync(ogr1);
                     return;
                 }
 
@@ -152,7 +135,7 @@ namespace Gorsellprogramlama1
             }
         }
 
-        private void geriToolStripMenuItem_Click(object sender, EventArgs e)
+        private  void geriToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmAnaSayfa frm = new FrmAnaSayfa();
             frm.Show();
@@ -164,6 +147,54 @@ namespace Gorsellprogramlama1
             System.Windows.Forms.Application.Exit();
         }
 
-     
+        private async void btnsil_Click(object sender, EventArgs e)
+        {
+            string Ad = txtAd.Text;
+            string SoyAd = txtSoyad.Text;
+            string Mail = txtMail.Text;
+            string Cinsiyet = comboBox1.Text;
+            string Kurs = txtKurs.Text;
+            string Egitmen = txtEgitmen.Text;
+            string Telefon = maskedTextBox1.Text;
+            if (Ad == "" || SoyAd == "" || Mail == "" || Telefon == "" || Kurs == "" || Cinsiyet == "")
+            {
+                MessageBox.Show("Eksik Bilgi Girdiniz.");
+            }
+
+
+            else
+            {
+                MessageBox.Show("Silindi");
+
+                KursK ogr1 = new KursK();
+                ogr1.Ad = txtAd.Text;
+                ogr1.SoyAd = txtSoyad.Text;
+                ogr1.Mail = txtMail.Text;
+                ogr1.Cinsiyet = comboBox1.Text;
+                ogr1.Kurs = txtKurs.Text;
+                ogr1.Egitmen = txtEgitmen.Text;
+                ogr1.Telefon = maskedTextBox1.Text;
+
+                if (txtKurs.Text == button2.Text)
+                {
+
+                    await firebase_istemci.Child("Kurs").Child("Gorsel Programlama").Child(ogr1.Mail).DeleteAsync();
+                    return;
+                }
+                if (txtKurs.Text == button3.Text)
+                {
+                    await firebase_istemci.Child("Kurs").Child("Yazılım, Test, Doğrulama").Child(ogr1.Mail).DeleteAsync();
+
+                    return;
+                }
+                if (txtKurs.Text == button4.Text)
+                {
+                    await firebase_istemci.Child("Kurs").Child("Elektronik Ticaret").Child(ogr1.Mail).DeleteAsync();
+                    return;
+                }
+
+
+            }
+        }
     }
 }

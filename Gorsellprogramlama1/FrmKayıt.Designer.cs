@@ -51,6 +51,7 @@
             this.geriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.çıkışToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.btnsil = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -264,7 +265,7 @@
             // 
             this.BtnKayıt.BackColor = System.Drawing.Color.Cyan;
             this.BtnKayıt.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BtnKayıt.Location = new System.Drawing.Point(325, 447);
+            this.BtnKayıt.Location = new System.Drawing.Point(261, 447);
             this.BtnKayıt.Name = "BtnKayıt";
             this.BtnKayıt.Size = new System.Drawing.Size(117, 34);
             this.BtnKayıt.TabIndex = 26;
@@ -299,12 +300,25 @@
             this.menuStrip1.TabIndex = 20;
             this.menuStrip1.Text = "menuStrip1";
             // 
+            // btnsil
+            // 
+            this.btnsil.BackColor = System.Drawing.Color.Red;
+            this.btnsil.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnsil.Location = new System.Drawing.Point(403, 447);
+            this.btnsil.Name = "btnsil";
+            this.btnsil.Size = new System.Drawing.Size(117, 34);
+            this.btnsil.TabIndex = 28;
+            this.btnsil.Text = "Sil";
+            this.btnsil.UseVisualStyleBackColor = false;
+            this.btnsil.Click += new System.EventHandler(this.btnsil_Click);
+            // 
             // FrmKayıt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.ClientSize = new System.Drawing.Size(885, 493);
+            this.Controls.Add(this.btnsil);
             this.Controls.Add(this.BtnKayıt);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -350,5 +364,6 @@
         private System.Windows.Forms.ToolStripMenuItem çıkışToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.TextBox txtKurs;
+        private System.Windows.Forms.Button btnsil;
     }
 }
