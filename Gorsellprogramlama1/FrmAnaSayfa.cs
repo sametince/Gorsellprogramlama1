@@ -34,12 +34,7 @@ namespace Gorsellprogramlama1
 
         }
 
-        private void BtnDers_Click(object sender, EventArgs e)
-        {
-            FrmDersler frm3 = new FrmDersler();
-            frm3.Show();
-            this.Hide();
-        }
+        
 
         private void BtnHakkımızda_Click(object sender, EventArgs e)
         {

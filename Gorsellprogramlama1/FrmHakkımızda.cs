@@ -33,5 +33,20 @@ namespace Gorsellprogramlama1
         {
             System.Windows.Forms.Application.Exit();
         }
+
+        private void btnrmzn_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Dr. Öğretim Üyesi Ramazan Özgür Doğan");
+        }
+
+        private void btnslh_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Öğretim Üyesi Salih Türk");
+        }
+
+        private void btnozkn_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Dr. Öğretim Üyesi Özkan Bingöl");
+        }
     }
 }
