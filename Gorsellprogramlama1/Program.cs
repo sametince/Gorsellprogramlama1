@@ -16,7 +16,7 @@ namespace Gorsellprogramlama1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmAnaSayfa());
+            Application.Run(new Login());
         }
     }
 }

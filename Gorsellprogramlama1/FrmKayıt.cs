@@ -26,7 +26,7 @@ namespace Gorsellprogramlama1
         {
             InitializeComponent();
 
-            firebase_istemci = new FirebaseClient("https://gorsel-programlama-2-default-rtdb.firebaseio.com/");
+            firebase_istemci = new FirebaseClient("https://gorselprogramlama-60cce-default-rtdb.firebaseio.com/");
 
         } 
           
