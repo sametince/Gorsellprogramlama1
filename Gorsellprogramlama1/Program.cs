@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Serialization;
+using System.Xml;
 
 namespace Gorsellprogramlama1
 {
@@ -14,9 +16,17 @@ namespace Gorsellprogramlama1
         [STAThread]
         static void Main()
         {
+            XmlDocument config= new XmlDocument();
+            config.Load("config.xml");
+
+            string AuthDomain = config.DocumentElement.SelectSingleNode("/FireBase/AuthDomain").InnerText;
+            string ApiKey = config.DocumentElement.SelectSingleNode("/FireBase/ApiKey").InnerText;
+
+
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
+            Application.Run(new Login(AuthDomain, ApiKey));
         }
     }
 }

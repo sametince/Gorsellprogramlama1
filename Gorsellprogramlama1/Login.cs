@@ -10,49 +10,94 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Gorsellprogramlama1.Controls;
 
 namespace Gorsellprogramlama1
 {
     public partial class Login : Form
     {
-        public Login()
+        private string AuthDomain, ApiKey;
+
+        private LoginUC loginUC;
+        private CreateUC createUC;
+        private FirebaseAuthClient client;
+
+
+
+        public Login(string AuthDomain, string ApiKey)
         {
             InitializeComponent();
-        }
+            this.AuthDomain = AuthDomain;
+            this.ApiKey = ApiKey;
 
-        private void BtnGiriş_Click(object sender, EventArgs e)
-        {
-            loginAsync().RunSynchronously();
-        }
-        public async Task loginAsync()
-        {
-            // Configure...
-            var config = new FirebaseAuthConfig
+            loginUC = new LoginUC();
+            createUC = new CreateUC();
+
+            btnKullanıcıGirisi_Click(this, EventArgs.Empty);
+
+            this.createUC.btnGirisYap.Click += BtnGirisYap_Click;
+            this.loginUC.btnKKaydol.Click += BtnKKaydol_Click;
+
+
+            FirebaseAuthConfig config = new FirebaseAuthConfig
             {
-                ApiKey = "AIzaSyBht0mtjAcTojE2TulHuTQ-vkFgWUaLst4",
-                AuthDomain = "gorselprogramlama-60cce.firebaseapp.com",
-                Providers = new FirebaseAuthProvider[]
-                {
-                    // Add and configure individual providers
-                    new GoogleProvider().AddScopes("email"),
-                    new EmailProvider()
-                    // ...
-                },
-
+                ApiKey = ApiKey,
+                AuthDomain = AuthDomain,
+                Providers = new FirebaseAuthProvider[]{new EmailProvider()},
             };
 
-            // ...and create your FirebaseAuthClient
-            var client = new FirebaseAuthClient(config);
 
-            var userCredential = await client.SignInWithEmailAndPasswordAsync("samet.inc@icloud.com", "12345sa!");
-
-            var user = userCredential.User;
-            var uid = user.Uid;
-            var name = user.Info.DisplayName; // more properties are available in user.Info
-            var refreshToken = user.Credential.RefreshToken;
-
-            // user methods
-            var token = await user.GetIdTokenAsync();
+            this.client = new FirebaseAuthClient(config);
         }
+
+        private async void BtnKKaydol_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                UserCredential kullanici_kimligi = await client.CreateUserWithEmailAndPasswordAsync(this.loginUC.txtmail.Text.Trim(), this.loginUC.txtsifre.Text.Trim());
+                MessageBox.Show(kullanici_kimligi.User.Uid);
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show("HATA:" + exc.Message);
+            }
+            finally
+            {
+
+            }
+        }
+
+        private async void BtnGirisYap_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                UserCredential kullanici_kimligi = await client.SignInWithEmailAndPasswordAsync(this.createUC.txtKmail.Text.Trim(), this.createUC.txtKsifre.Text.Trim());
+                MessageBox.Show(kullanici_kimligi.User.Uid);
+            }
+            catch(Exception exc)
+            {
+                MessageBox.Show("HATA:" + exc.Message);            
+            }
+            finally { 
+                            
+            }
+        
+        }
+
+        private void btnYeniKullanıcı_Click(object sender, EventArgs e)
+        {     
+            kullanıcıPanel.Controls.Clear();
+            kullanıcıPanel.Controls.Add(loginUC);
+
+        }
+
+        private void btnKullanıcıGirisi_Click(object sender, EventArgs e)
+        {
+            kullanıcıPanel.Controls.Clear();
+            kullanıcıPanel.Controls.Add(createUC);
+
+        }
+
+       
     }
 }
