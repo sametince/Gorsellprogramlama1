@@ -37,22 +37,24 @@
             // 
             // BtnKayıtEkleme
             // 
+            this.BtnKayıtEkleme.BackColor = System.Drawing.Color.IndianRed;
             this.BtnKayıtEkleme.Location = new System.Drawing.Point(57, 63);
             this.BtnKayıtEkleme.Name = "BtnKayıtEkleme";
             this.BtnKayıtEkleme.Size = new System.Drawing.Size(197, 60);
             this.BtnKayıtEkleme.TabIndex = 0;
             this.BtnKayıtEkleme.Text = "Kayıt Ekleme";
-            this.BtnKayıtEkleme.UseVisualStyleBackColor = true;
+            this.BtnKayıtEkleme.UseVisualStyleBackColor = false;
             this.BtnKayıtEkleme.Click += new System.EventHandler(this.button1_Click);
             // 
             // BtnHakkımızda
             // 
+            this.BtnHakkımızda.BackColor = System.Drawing.Color.IndianRed;
             this.BtnHakkımızda.Location = new System.Drawing.Point(57, 190);
             this.BtnHakkımızda.Name = "BtnHakkımızda";
             this.BtnHakkımızda.Size = new System.Drawing.Size(197, 60);
             this.BtnHakkımızda.TabIndex = 3;
             this.BtnHakkımızda.Text = "Kurum Hakkında";
-            this.BtnHakkımızda.UseVisualStyleBackColor = true;
+            this.BtnHakkımızda.UseVisualStyleBackColor = false;
             this.BtnHakkımızda.Click += new System.EventHandler(this.BtnHakkımızda_Click);
             // 
             // pictureBox1
@@ -67,19 +69,20 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.IndianRed;
             this.button1.Location = new System.Drawing.Point(57, 316);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(197, 60);
             this.button1.TabIndex = 6;
             this.button1.Text = "ÇIKIŞ";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // FrmAnaSayfa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);

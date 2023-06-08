@@ -17,7 +17,6 @@ namespace Gorsellprogramlama1
     public partial class Login : Form
     {
         private string AuthDomain, ApiKey;
-
         private LoginUC loginUC;
         private CreateUC createUC;
         private FirebaseAuthClient client;
@@ -55,7 +54,10 @@ namespace Gorsellprogramlama1
             try
             {
                 UserCredential kullanici_kimligi = await client.CreateUserWithEmailAndPasswordAsync(this.loginUC.txtmail.Text.Trim(), this.loginUC.txtsifre.Text.Trim());
-                MessageBox.Show(kullanici_kimligi.User.Uid);
+               
+                FrmAnaSayfa nesne = new FrmAnaSayfa();
+                nesne.Show();
+                this.Hide();
             }
             catch (Exception exc)
             {
@@ -72,7 +74,11 @@ namespace Gorsellprogramlama1
             try
             {
                 UserCredential kullanici_kimligi = await client.SignInWithEmailAndPasswordAsync(this.createUC.txtKmail.Text.Trim(), this.createUC.txtKsifre.Text.Trim());
-                MessageBox.Show(kullanici_kimligi.User.Uid);
+                
+                FrmAnaSayfa nesne=new FrmAnaSayfa(); 
+                nesne.Show();
+                this.Hide();
+
             }
             catch(Exception exc)
             {

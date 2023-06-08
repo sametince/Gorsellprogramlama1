@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Gorsellprogramlama1.Controls
 {
     public partial class CreateUC : UserControl

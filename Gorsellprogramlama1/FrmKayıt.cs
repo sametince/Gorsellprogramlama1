@@ -26,7 +26,7 @@ namespace Gorsellprogramlama1
         {
             InitializeComponent();
 
-            firebase_istemci = new FirebaseClient("https://gorselprogramlama-60cce-default-rtdb.firebaseio.com/");
+            firebase_istemci = new FirebaseClient("https://gorselprogramlama-48e82-default-rtdb.firebaseio.com/");
 
         } 
           
@@ -102,7 +102,7 @@ namespace Gorsellprogramlama1
 
             else
             {
-                MessageBox.Show("Kaydedildi");
+                MessageBox.Show("Kaydediliyor..");
 
                 KursK ogr1 = new KursK();
                 ogr1.Ad = txtAd.Text;
@@ -164,7 +164,7 @@ namespace Gorsellprogramlama1
 
             else
             {
-                MessageBox.Show("Silindi");
+                MessageBox.Show("Siliniyor..");
 
                 KursK ogr1 = new KursK();
                 ogr1.Ad = txtAd.Text;

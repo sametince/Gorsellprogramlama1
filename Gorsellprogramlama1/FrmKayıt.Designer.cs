@@ -223,9 +223,9 @@
             this.groupBox2.Controls.Add(this.button3);
             this.groupBox2.Controls.Add(this.button2);
             this.groupBox2.ForeColor = System.Drawing.Color.Black;
-            this.groupBox2.Location = new System.Drawing.Point(445, 50);
+            this.groupBox2.Location = new System.Drawing.Point(569, 50);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(428, 387);
+            this.groupBox2.Size = new System.Drawing.Size(304, 387);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Kurslar";
@@ -233,7 +233,8 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(48, 297);
+            this.button4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.button4.Location = new System.Drawing.Point(41, 296);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(233, 50);
             this.button4.TabIndex = 6;
@@ -243,7 +244,8 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(48, 169);
+            this.button3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.button3.Location = new System.Drawing.Point(41, 168);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(233, 50);
             this.button3.TabIndex = 5;
@@ -253,7 +255,8 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(48, 36);
+            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.button2.Location = new System.Drawing.Point(41, 35);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(233, 50);
             this.button2.TabIndex = 4;
@@ -265,7 +268,7 @@
             // 
             this.BtnKayıt.BackColor = System.Drawing.Color.Cyan;
             this.BtnKayıt.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BtnKayıt.Location = new System.Drawing.Point(261, 447);
+            this.BtnKayıt.Location = new System.Drawing.Point(326, 447);
             this.BtnKayıt.Name = "BtnKayıt";
             this.BtnKayıt.Size = new System.Drawing.Size(117, 34);
             this.BtnKayıt.TabIndex = 26;
@@ -304,7 +307,7 @@
             // 
             this.btnsil.BackColor = System.Drawing.Color.Red;
             this.btnsil.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnsil.Location = new System.Drawing.Point(403, 447);
+            this.btnsil.Location = new System.Drawing.Point(449, 447);
             this.btnsil.Name = "btnsil";
             this.btnsil.Size = new System.Drawing.Size(117, 34);
             this.btnsil.TabIndex = 28;
