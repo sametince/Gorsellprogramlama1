@@ -32,6 +32,11 @@ namespace Gorsellprogramlama1.Controls
 
         private void btnGirisYap_Click(object sender, EventArgs e)
         {
+       
+        }
+
+        private void txtKmail_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

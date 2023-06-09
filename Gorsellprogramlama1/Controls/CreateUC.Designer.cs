@@ -65,6 +65,7 @@
             this.txtKmail.Name = "txtKmail";
             this.txtKmail.Size = new System.Drawing.Size(245, 22);
             this.txtKmail.TabIndex = 2;
+            this.txtKmail.TextChanged += new System.EventHandler(this.txtKmail_TextChanged);
             // 
             // txtKsifre
             // 

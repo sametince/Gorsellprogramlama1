@@ -73,6 +73,7 @@ namespace Gorsellprogramlama1
         {
             try
             {
+                
                 UserCredential kullanici_kimligi = await client.SignInWithEmailAndPasswordAsync(this.createUC.txtKmail.Text.Trim(), this.createUC.txtKsifre.Text.Trim());
                 
                 FrmAnaSayfa nesne=new FrmAnaSayfa(); 
@@ -103,7 +104,7 @@ namespace Gorsellprogramlama1
             kullanıcıPanel.Controls.Add(createUC);
 
         }
-
+     
        
     }
 }
