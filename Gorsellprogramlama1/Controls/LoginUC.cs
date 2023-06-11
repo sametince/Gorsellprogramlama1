@@ -26,6 +26,13 @@ namespace Gorsellprogramlama1.Controls
 
         private void btnKKaydol_Click(object sender, EventArgs e)
         {
+            
+        }
+
+      
+
+        private void txtGmail_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

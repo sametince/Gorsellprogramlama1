@@ -21,7 +21,8 @@ namespace Gorsellprogramlama1
 
             string AuthDomain = config.DocumentElement.SelectSingleNode("/FireBase/AuthDomain").InnerText.Trim();
             string ApiKey = config.DocumentElement.SelectSingleNode("/FireBase/ApiKey").InnerText.Trim();
-         
+            string FbDatabase = config.DocumentElement.SelectSingleNode("/FireBase/FbDatabase").InnerText.Trim();
+
 
 
             Application.EnableVisualStyles();

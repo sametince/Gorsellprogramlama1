@@ -15,6 +15,7 @@ using System.Diagnostics.Eventing.Reader;
 using Firebase.Database;
 using Firebase.Database.Query;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using Gorsellprogramlama1.Controls;
 
 namespace Gorsellprogramlama1
 {
@@ -63,9 +64,9 @@ namespace Gorsellprogramlama1
         {
 
         }
-        private void txtMail_TextChanged(object sender, EventArgs e)
+        public void txtMail_TextChanged(object sender, EventArgs e)
         {
-
+        
         }
 
 
@@ -80,10 +81,7 @@ namespace Gorsellprogramlama1
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private async void BtnKayıt_Click(object sender, EventArgs e)
         {

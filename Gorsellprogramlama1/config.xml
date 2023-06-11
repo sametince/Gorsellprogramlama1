@@ -2,5 +2,6 @@
 <FireBase>
 	<ApiKey>AIzaSyA7_vJhg1aSJQTUX4fk5KlUSCHtezufKFc</ApiKey>
 	<AuthDomain>gorselprogramlama-48e82.firebaseapp.com</AuthDomain>
+	<FbDatabase>https://gorselprogramlama-48e82-default-rtdb.firebaseio.com/</FbDatabase>
 </FireBase>
 

@@ -16,6 +16,7 @@ namespace Gorsellprogramlama1
 {
     public partial class Login : Form
     {
+        FrmKayıt frmKayıt;
         private string AuthDomain, ApiKey;
         private LoginUC loginUC;
         private CreateUC createUC;
@@ -53,7 +54,7 @@ namespace Gorsellprogramlama1
         {
             try
             {
-                UserCredential kullanici_kimligi = await client.CreateUserWithEmailAndPasswordAsync(this.loginUC.txtmail.Text.Trim(), this.loginUC.txtsifre.Text.Trim());
+                UserCredential kullanici_kimligi = await client.CreateUserWithEmailAndPasswordAsync(this.loginUC.txtGmail.Text.Trim(), this.loginUC.txtsifre.Text.Trim());
                
                 FrmAnaSayfa nesne = new FrmAnaSayfa();
                 nesne.Show();
@@ -101,8 +102,7 @@ namespace Gorsellprogramlama1
         private void btnKullanıcıGirisi_Click(object sender, EventArgs e)
         {
             kullanıcıPanel.Controls.Clear();
-            kullanıcıPanel.Controls.Add(createUC);
-
+            kullanıcıPanel.Controls.Add(createUC);         
         }
      
        

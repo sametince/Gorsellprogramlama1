@@ -30,10 +30,10 @@
         {
             this.btnKKaydol = new System.Windows.Forms.Button();
             this.txtsifre = new System.Windows.Forms.TextBox();
-            this.txtmail = new System.Windows.Forms.TextBox();
             this.lblsifre = new System.Windows.Forms.Label();
             this.lblmail = new System.Windows.Forms.Label();
             this.gosterK = new System.Windows.Forms.CheckBox();
+            this.txtGmail = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnKKaydol
@@ -53,13 +53,6 @@
             this.txtsifre.PasswordChar = '*';
             this.txtsifre.Size = new System.Drawing.Size(261, 22);
             this.txtsifre.TabIndex = 9;
-            // 
-            // txtmail
-            // 
-            this.txtmail.Location = new System.Drawing.Point(76, 27);
-            this.txtmail.Name = "txtmail";
-            this.txtmail.Size = new System.Drawing.Size(261, 22);
-            this.txtmail.TabIndex = 8;
             // 
             // lblsifre
             // 
@@ -92,14 +85,22 @@
             this.gosterK.UseVisualStyleBackColor = true;
             this.gosterK.CheckedChanged += new System.EventHandler(this.gosterK_CheckedChanged);
             // 
+            // txtGmail
+            // 
+            this.txtGmail.Location = new System.Drawing.Point(76, 27);
+            this.txtGmail.Name = "txtGmail";
+            this.txtGmail.Size = new System.Drawing.Size(261, 22);
+            this.txtGmail.TabIndex = 13;
+            this.txtGmail.TextChanged += new System.EventHandler(this.txtGmail_TextChanged);
+            // 
             // LoginUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.txtGmail);
             this.Controls.Add(this.gosterK);
             this.Controls.Add(this.btnKKaydol);
             this.Controls.Add(this.txtsifre);
-            this.Controls.Add(this.txtmail);
             this.Controls.Add(this.lblsifre);
             this.Controls.Add(this.lblmail);
             this.Name = "LoginUC";
@@ -115,6 +116,6 @@
         private System.Windows.Forms.CheckBox gosterK;
         public System.Windows.Forms.Button btnKKaydol;
         public System.Windows.Forms.TextBox txtsifre;
-        public System.Windows.Forms.TextBox txtmail;
+        public System.Windows.Forms.TextBox txtGmail;
     }
 }
